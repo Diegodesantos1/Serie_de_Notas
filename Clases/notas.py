@@ -23,7 +23,12 @@ class Serie_notas:
         x = np.random.randint (1,16, size= 16)
         y = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         plt.scatter(x,y) ; plt.show()
+    def datos_aberrantes():
+        notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
+        dato_max = max(notas) ; dato_min = min(notas)
+        print(f"Los datos aberrantes son {dato_max} and {dato_min}")
 
 Serie_notas.media()
 Serie_notas.moda()
 Serie_notas.dispersion()
+Serie_notas.datos_aberrantes()
