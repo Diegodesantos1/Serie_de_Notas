@@ -13,5 +13,6 @@ class Serie_notas:
         for i in range (len(notas)):
             nota = notas.pop(0)
             suma_notas += nota
-        print(suma_notas)
+        media = suma_notas / 20
+        print(f"La tendencia central de las notas es {media}")
 Serie_notas.tendencia_central()
