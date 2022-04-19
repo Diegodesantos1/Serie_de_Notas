@@ -1,7 +1,5 @@
-import matplotlib
-
-
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
+import numpy as np
 
 class Serie_notas:
     global notas
@@ -21,6 +19,11 @@ class Serie_notas:
         notas.sort() ; print(notas)
         moda = max(set(notas), key = notas.count)
         print(f"la moda es {moda}")
+    def dispersion():
+        x = np.random.randint (1,16, size= 16)
+        y = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
+        plt.scatter(x,y) ; plt.show()
 
 Serie_notas.media()
 Serie_notas.moda()
+Serie_notas.dispersion()
