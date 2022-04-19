@@ -27,13 +27,13 @@ class Serie_notas:
         x = lista_numeros
         y = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         lista_colores = ["r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r"]
-        plt.scatter(x,y, color = lista_colores ,label="Dispersión") ; plt.legend() ; plt.show()
+        plt.scatter(x,y, color = lista_colores ,label="Dispersión") ; plt.legend() ; plt.title("Gráfico de dispersión"); plt.show()
     def diagrama_cajas():
         plt.boxplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
-        plt.show()
+        plt.title("Diagrama de cajas") ; plt.show()
     def diagrama_violin():
         plt.violinplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
-        plt.show()
+        plt.title("Diagrama de violín") ; plt.show()
     def datos_aberrantes():
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         dato_max = max(notas) ; dato_min = min(notas)
