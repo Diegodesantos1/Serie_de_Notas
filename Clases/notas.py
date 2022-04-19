@@ -34,7 +34,8 @@ class Serie_notas:
         dato_max = max(notas) ; dato_min = min(notas)
         print(f"\nLos datos aberrantes son {dato_max} and {dato_min}")
 
-Serie_notas.media()
-Serie_notas.moda()
-Serie_notas.datos_aberrantes()
-Serie_notas.dispersion()
+def iniciar():
+    Serie_notas.media()
+    Serie_notas.moda()
+    Serie_notas.datos_aberrantes()
+    Serie_notas.dispersion()
