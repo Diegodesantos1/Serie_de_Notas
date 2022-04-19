@@ -29,13 +29,22 @@ class Serie_notas:
         y = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         lista_colores = ["r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r"]
         plt.scatter(x,y, color = lista_colores) ; plt.show()
+    def diagrama_cajas():
+        plt.boxplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
+        plt.show()
+    def diagrama_violin():
+        plt.violinplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
+        plt.show()
     def datos_aberrantes():
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         dato_max = max(notas) ; dato_min = min(notas)
         print(f"\nLos datos aberrantes son {dato_max} and {dato_min}")
 
 def iniciar():
-    Serie_notas.media()
-    Serie_notas.moda()
-    Serie_notas.datos_aberrantes()
-    Serie_notas.dispersion()
+    Nota = Serie_notas
+    Nota.media()
+    Nota.moda()
+    Nota.datos_aberrantes()
+    Nota.dispersion()
+    Nota.diagrama_cajas()
+    Nota.diagrama_violin()
