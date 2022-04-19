@@ -16,22 +16,25 @@ class Serie_notas:
             nota = notas.pop(0)
             suma_notas += nota
         media = suma_notas / 20
-        print(f"La media de las notas es {media}")
+        print(f"\nLa media de las notas es {media}\n")
     def moda():
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
-        notas.sort() ; print(notas)
-        moda = max(set(notas), key = notas.count)
-        print(f"La tendencia central de las notas es {moda}")
+        notas.sort() ; moda = max(set(notas), key = notas.count)
+        print(f"\nLa tendencia central de las notas es {moda}\n")
     def dispersion():
-        x = np.random.randint (1,16, size= 16)
+        lista_numeros = []
+        for i in range (16):
+            lista_numeros.append(i)
+        x = lista_numeros
         y = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
-        plt.scatter(x,y) ; plt.show()
+        lista_colores = ["r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r"]
+        plt.scatter(x,y, color = lista_colores) ; plt.show()
     def datos_aberrantes():
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         dato_max = max(notas) ; dato_min = min(notas)
-        print(f"Los datos aberrantes son {dato_max} and {dato_min}")
+        print(f"\nLos datos aberrantes son {dato_max} and {dato_min}")
 
 Serie_notas.media()
 Serie_notas.moda()
-Serie_notas.dispersion()
 Serie_notas.datos_aberrantes()
+Serie_notas.dispersion()
