@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
 class Serie_notas:
     def __init__ (self, notas, suma_notas, media, moda, dato_max, dato_min):
@@ -28,7 +27,7 @@ class Serie_notas:
         x = lista_numeros
         y = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         lista_colores = ["r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r", "g", "b", "r"]
-        plt.scatter(x,y, color = lista_colores) ; plt.show()
+        plt.scatter(x,y, color = lista_colores ,label="Dispersión") ; plt.legend() ; plt.show()
     def diagrama_cajas():
         plt.boxplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
         plt.show()
