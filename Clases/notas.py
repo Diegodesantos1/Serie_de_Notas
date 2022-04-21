@@ -35,10 +35,6 @@ class Serie_notas:
     def diagrama_violin():
         plt.violinplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
         plt.title("Diagrama de violín") ; plt.show()
-    def datos_aberrantes():
-        notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
-        dato_max = max(notas) ; dato_min = min(notas)
-        print(f"\nLos datos aberrantes son {dato_max} and {dato_min}")
 
 def iniciar():
     Nota = Serie_notas
