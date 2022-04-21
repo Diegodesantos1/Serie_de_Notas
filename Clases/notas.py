@@ -22,16 +22,14 @@ class Serie_notas:
         print(f"\nLa tendencia central de las notas es {moda}\n")
     def datos_aberrantes():
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
-        x1 = [1,2] ; x2 = [6,9,10,11,12,14] ; x3 = [3,4,5,7,8,13,15,16]
-        y1 = [3,19] ; y2 = [11,11,11,12,12,12] ; y3 = [10,15,14,9,8,13,14,16]
         dato_max = max(notas) ; dato_min = min(notas)
         print(f"\nLos datos aberrantes son {dato_max} and {dato_min}\n")
     def grafico_dispersion():
-        x1 = [1,2] ; x2 = [6,9,10,11,12,14] ; x3 = [3,4,5,7,8,13,15,16] #colocados por posición
-        y1 = [3,19] ; y2 = [11,11,11,12,12,12] ; y3 = [10,15,14,9,8,13,14,16] #colocado por notas
-        plt.scatter(x1,y1, color = "red" ,label="Datos aberrantes")
-        plt.scatter(x2,y2, color = "green" ,label="Tendencia Central")
-        plt.scatter(x3,y3, color = "blue" ,label="Resto")
+        notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16] ; notas.sort()
+        y = notas
+        x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+        colores = ["r", "b", "b", "b", "g", "g", "g", "g", "g", "g", "b", "b", "b", "b", "b", "r"]
+        plt.scatter(x,y ,color = colores)
         plt.legend() ; plt.title("Gráfico de dispersión"); plt.show()
     def diagrama_cajas():
         plt.boxplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
