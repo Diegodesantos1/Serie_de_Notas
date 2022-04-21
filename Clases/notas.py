@@ -1,13 +1,11 @@
 import matplotlib.pyplot as plt
 
 class Serie_notas:
-    def __init__ (self, notas, suma_notas, media, moda, dato_max, dato_min, x1, x2, x3, y1, y2, y3):
+    def __init__ (self, notas, suma_notas, media, moda, dato_max, dato_min, x):
         self.notas = notas
         self.suma_notas = suma_notas ; self.media = media
         self.moda = moda ; self.dato_max = dato_max
-        self.dato_min = dato_min ; self.x1 = x1
-        self.x2 = x2 ; self.x3 = x3 ; self.y1 = y1
-        self.y2 = y2 ; self.y3 = y3
+        self.dato_min = dato_min ; self.x = x
     def calcular_media():
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         suma_notas = 0
