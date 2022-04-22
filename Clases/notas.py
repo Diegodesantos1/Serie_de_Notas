@@ -22,25 +22,25 @@ class Serie_notas:
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]
         dato_max = max(notas) ; dato_min = min(notas)
         print(f"\nLos datos aberrantes son {dato_max} and {dato_min}\n")
-    def grafico_dispersion():
+    def graficos():
         notas = [3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16] ; notas.sort()
         y = notas
         x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
         colores = ["r", "b", "b", "b", "g", "g", "g", "g", "g", "g", "b", "b", "b", "b", "b", "r"]
+        plt.subplot(2, 2, 1)
         plt.scatter(x,y ,color = colores)
-        plt.legend() ; plt.title("Gráfico de dispersión"); plt.show()
-    def diagrama_cajas():
+        plt.legend() ; plt.title("Gráfico de dispersión")
+        plt.subplot(2, 2, 2)
         plt.boxplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
-        plt.title("Diagrama de cajas") ; plt.show()
-    def diagrama_violin():
+        plt.title("Diagrama de cajas")
+        plt.subplot(2,2,3)
         plt.violinplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
-        plt.title("Diagrama de violín") ; plt.show()
+        plt.title("Diagrama de violín")
+        plt.show()
 
 def iniciar():
     Nota = Serie_notas
     Nota.calcular_media()
     Nota.calcular_moda()
     Nota.datos_aberrantes()
-    Nota.grafico_dispersion()
-    Nota.diagrama_cajas()
-    Nota.diagrama_violin()
+    Nota.graficos()
