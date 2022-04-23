@@ -8,6 +8,8 @@ if __name__ == '__main__':
     if eleccion == 1:
         notas.iniciar()
     elif eleccion ==2:
-        observaciones = pnd.DataFrame({'NOTAS':np.array([3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16])})
-        stats = jmp.JMPEstadisticas(observaciones['NOTAS'])
+        datos = pnd.read_csv("Student_grade.csv", header=0 , sep =",")
+        lista_notas = list(datos["Notas"])
+        # observaciones = pnd.DataFrame({'NOTAS':np.array([3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16])})
+        stats = jmp.JMPEstadisticas(lista_notas)
         stats.analisisCaracteristica()
