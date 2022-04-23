@@ -29,7 +29,7 @@ class Serie_notas:
         colores = ["r", "b", "b", "b", "g", "g", "g", "g", "g", "g", "b", "b", "b", "b", "b", "r"]
         plt.subplot(2, 2, 1)
         plt.scatter(x,y ,color = colores)
-        plt.legend() ; plt.title("Gráfico de dispersión")
+        plt.title("Gráfico de dispersión")
         plt.subplot(2, 2, 2)
         plt.boxplot([[3,19,10,15,14,12,9,8,11,12,11,12,13,11,14,16]])
         plt.title("Diagrama de cajas")
