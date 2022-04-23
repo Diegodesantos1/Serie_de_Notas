@@ -4,7 +4,7 @@ import numpy as np
 
 from Clases import notas
 if __name__ == '__main__':
-    eleccion = int(input(("¿Qué versión quieres usar? \n 1: La creada por mi \n 2: La dada por Rubén\n")))
+    eleccion = int(input(("¿Qué versión quieres usar? \n 1: La creada anterior a las nuevas pautas \n 2: La nueva dada por las nuevas pautas\n")))
     if eleccion == 1:
         notas.iniciar()
     elif eleccion ==2:
