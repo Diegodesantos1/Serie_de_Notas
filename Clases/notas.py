@@ -14,7 +14,7 @@ class Serie_notas:
         for i in range (len(lista_notas)):
             nota = lista_notas.pop(0)
             suma_notas += nota
-        media = suma_notas / total
+        media = round(suma_notas / total, 2)
         print(f"\nLa media de las notas es {media}\n")
     def calcular_moda():
         datos = pnd.read_csv("Student_grade.csv", header=0 , sep =",")
@@ -28,8 +28,11 @@ class Serie_notas:
         print(f"\nLos datos aberrantes son {dato_max} and {dato_min}\n")
     def graficos():
         datos = pnd.read_csv("Student_grade.csv", header=0 , sep =",")
-        lista_notas = list(datos["Notas"]) ; lista_notas.sort()
-        x = [1,2,3,4,5,6,7,8,9,10]
+        lista_notas = list(datos["Notas"]) ; lista_notas.sort() ; x = []
+        for i in range (len(lista_notas)):
+            lista_notas.pop(i)
+            i = round(i)
+            x.append(i)
         plt.subplot(2, 2, 1)
         plt.scatter(x,lista_notas ,color = "green")
         plt.title("Gráfico de dispersión")
