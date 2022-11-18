@@ -1,16 +1,11 @@
 import pandas as pnd
-import Clases_Rubén.JMPEstadisticas as jmp
+import JMPEstadisticas as jmp
 import numpy as np
 
-from Clases import notas
 if __name__ == '__main__':
-    eleccion = int(input(("¿Qué versión quieres usar? \n 1: Básica \n 2: Completa\n")))
-    if eleccion == 1:
-        notas.iniciar()
-    elif eleccion ==2:
-        datos = pnd.read_csv("Student_grade.csv", header=0 , sep =",")
-        lista_notas = list(datos["Notas"])
-        observaciones = pnd.DataFrame({'NOTAS': lista_notas})
+        datos = pnd.read_csv("Industry4.0.csv", header=0 , sep =",")
+        lista_poblacion = list(datos["Population"])
+        observaciones = pnd.DataFrame({'Population': lista_poblacion})
         #--- ANALISIS DE UNA CARACTERISTICA ---
-        stats = jmp.JMPEstadisticas(observaciones['NOTAS'])
+        stats = jmp.JMPEstadisticas(observaciones['Population'])
         stats.analisisCaracteristica()
